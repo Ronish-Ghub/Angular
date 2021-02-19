@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-sm-6">
+
+        <h2><u>TO DO</u></h2>
+        <input type="text" class="form-control" id="task" (input)="addtask($event)">
+        <button (click)="add()" class="btn btn-primary">+</button>
+
+        <div>
+            <ul id="mytask"></ul>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h2><u>TOMORROW</u></h2>
+        <ul id="tw"></ul>
+    </div>
+</div>

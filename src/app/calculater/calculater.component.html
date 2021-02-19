@@ -1,0 +1,17 @@
+<div style="background-color: rgb(52, 52, 54);width: 18%;position: absolute;left: 30%;right: 30%;height: 350px">
+    <br>
+    <div style="position: relative; left: 22%;" *ngIf="operator=='' && value1!==''"><input type="text" value={{value1}} (input)="setvalue1($event)">
+    </div><br>
+    <div style="position: relative; left: 7%; top: -5%;" *ngIf="value1!=='' && operator!=='' && eq!='='">value 2:<input type="text" value={{value2}}
+            (input)="setvalue2($event)">{{value2}}</div><br>
+    <div *ngIf="eq=='=' "><input type="text" value={{sum}} (input)="setvalue3($event)"></div><br>
+    <div style="position: relative; left: 38%;">
+        <button *ngFor="let num1 of [1,2,3]" (click)="numView(num1)">{{num1}}</button><br><br>
+        <button *ngFor="let num1 of [4,5,6]" (click)="numView(num1)">{{num1}}</button><br><br>
+        <button *ngFor="let num1 of [7,8,9]" (click)="numView(num1)">{{num1}}</button><br><br>
+        <button style="position: relative; left: 10%;" *ngFor="let num1 of [0]"
+            (click)="numView(num1)">{{num1}}</button><br><br>
+        <button *ngFor="let num2 of ['+','-','/','*','=']" (click)="setOperator(num2)">{{num2}}</button><br><br>
+        {{operator}}
+    </div>
+</div>
