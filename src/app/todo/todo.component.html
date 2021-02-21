@@ -5,8 +5,8 @@
         <input type="text" class="form-control" id="task" (input)="addtask($event)">
         <button (click)="add()" class="btn btn-primary">+</button>
 
-        <div>
-            <ul id="mytask"></ul>
+        <div *ngIf="s!=''">
+            <ul>{{s}}</ul>
         </div>
     </div>
     <div class="col-sm-6">

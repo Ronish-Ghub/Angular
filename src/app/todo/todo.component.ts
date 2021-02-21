@@ -15,12 +15,17 @@ export class TODOComponent implements OnInit {
   }
   todo:any[]=[]
   task:string=''
+  s:any
   addtask(event:any){
     this.task = (event.target as HTMLInputElement).value
     
   }
   add(){
     this.todo.push(this.task)
+    this.s=this.todo
     console.log(this.todo)
+  }
+  viewtodo(){
+    
   }
 }
